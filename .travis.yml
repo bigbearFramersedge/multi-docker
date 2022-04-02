@@ -21,4 +21,5 @@ after_success:
   - docker push pengwang/multi-client 
   - docker push pengwang/multi-nginx  
   - docker push pengwang/multi-server 
-  - docker push pengwang/multi-worker 
+  - docker push pengwang/multi-worker
+  
