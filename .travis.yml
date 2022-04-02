@@ -11,14 +11,14 @@ script:
   - docker run -e CI=true pengwang/react-test npm test
 
 after_success:
-  - docker build -t pengwang/multi-client ./client
-  - docker build -t pengwang/multi-nginx ./nginx
-  - docker build -t pengwang/multi-server ./server
-  - docker build -t pengwang/multi-worker ./worker
+  - docker build -t bigbearwang/multi-client ./client
+  - docker build -t bigbearwang/multi-nginx ./nginx
+  - docker build -t bigbearwang/multi-server ./server
+  - docker build -t bigbearwang/multi-worker ./worker
   # log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - docker push pengwang/multi-client
-  - docker push pengwang/multi-nginx
-  - docker push pengwang/multi-server
-  - docker push pengwang/multi-worker
+  - docker push bigbearwang/multi-client
+  - docker push bigbearwang/multi-nginx
+  - docker push bigbearwang/multi-server
+  - docker push bigbearwang/multi-worker
